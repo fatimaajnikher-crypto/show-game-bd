@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCM - MERISE et SQL</title>
+    <link rel="stylesheet" href="qcm-style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>QCM - MERISE et SQL</h1>
+            <p>Testez vos connaissances sur la modélisation de données et SQL</p>
+            <div class="progress-bar">
+                <div class="progress" id="progressBar"></div>
+            </div>
+            <p class="progress-text"><span id="currentQuestion">0</span> / 30 questions</p>
+        </header>
+
+        <main>
+            <form id="qcmForm">
+                <!-- Questions à choix multiples simples (1-10) -->
+                <section class="question-section">
+                    <h2>🔹 Questions à choix multiples simples</h2>
+
+                    <div class="question" data-question="1">
+                        <h3>1. Quels sont les trois sous-systèmes principaux d'une entreprise selon le cours ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q1" value="a"> a) Décision, Information, Opérant</label>
+                            <label><input type="radio" name="q1" value="b"> b) Décision, Gestion, Production</label>
+                            <label><input type="radio" name="q1" value="c"> c) Stratégique, Tactique, Opérationnel</label>
+                            <label><input type="radio" name="q1" value="d"> d) Direction, RH, Finances</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+
+                    <div class="question" data-question="2">
+                        <h3>2. Un modèle est défini comme :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q2" value="a"> a) Un ensemble de données brutes</label>
+                            <label><input type="radio" name="q2" value="b"> b) Une représentation abstraite d'une partie du monde réel</label>
+                            <label><input type="radio" name="q2" value="c"> c) Un logiciel de gestion</label>
+                            <label><input type="radio" name="q2" value="d"> d) Un diagramme physique</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="3">
+                        <h3>3. MERISE repose sur combien de modèles principaux ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q3" value="a"> a) 1</label>
+                            <label><input type="radio" name="q3" value="b"> b) 2 (données et traitements)</label>
+                            <label><input type="radio" name="q3" value="c"> c) 3 (conceptuel, logique, physique)</label>
+                            <label><input type="radio" name="q3" value="d"> d) 4</label>
+                        </div>
+                        <div class="feedback" data-answer="c"></div>
+                    </div>
+
+                    <div class="question" data-question="4">
+                        <h3>4. Une dépendance fonctionnelle élémentaire directe :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q4" value="a"> a) Est toujours transitive</label>
+                            <label><input type="radio" name="q4" value="b"> b) N'existe pas dans un MCD</label>
+                            <label><input type="radio" name="q4" value="c"> c) Est une DF sans propriété intermédiaire</label>
+                            <label><input type="radio" name="q4" value="d"> d) Concerne uniquement les clés étrangères</label>
+                        </div>
+                        <div class="feedback" data-answer="c"></div>
+                    </div>
+
+                    <div class="question" data-question="5">
+                        <h3>5. Dans un MCD, l'identifiant d'une association est :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q5" value="a"> a) Explicite et représenté</label>
+                            <label><input type="radio" name="q5" value="b"> b) La combinaison des identifiants des entités associées</label>
+                            <label><input type="radio" name="q5" value="c"> c) Toujours un attribut ajouté</label>
+                            <label><input type="radio" name="q5" value="d"> d) Optionnel</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="6">
+                        <h3>6. La première forme normale (1FN) impose :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q6" value="a"> a) Aucune propriété répétitive ou décomposable</label>
+                            <label><input type="radio" name="q6" value="b"> b) Toute propriété hors identifiant dépend de la totalité de l'identifiant</label>
+                            <label><input type="radio" name="q6" value="c"> c) Pas de dépendance transitive</label>
+                            <label><input type="radio" name="q6" value="d"> d) Une clé primaire unique</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+
+                    <div class="question" data-question="7">
+                        <h3>7. Une clé étrangère sert principalement à :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q7" value="a"> a) Identifier un tuple de manière unique</label>
+                            <label><input type="radio" name="q7" value="b"> b) Garantir l'intégrité référentielle entre tables</label>
+                            <label><input type="radio" name="q7" value="c"> c) Stocker des valeurs NULL</label>
+                            <label><input type="radio" name="q7" value="d"> d) Créer des index</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="8">
+                        <h3>8. Quelle requête SQL crée une base nommée "ma_base" ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q8" value="a"> a) CREATE DB ma_base</label>
+                            <label><input type="radio" name="q8" value="b"> b) NEW DATABASE ma_base</label>
+                            <label><input type="radio" name="q8" value="c"> c) CREATE DATABASE ma_base</label>
+                            <label><input type="radio" name="q8" value="d"> d) ADD DATABASE ma_base</label>
+                        </div>
+                        <div class="feedback" data-answer="c"></div>
+                    </div>
+
+                    <div class="question" data-question="9">
+                        <h3>9. Quelle contrainte empêche les valeurs NULL dans une colonne ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q9" value="a"> a) UNIQUE</label>
+                            <label><input type="radio" name="q9" value="b"> b) PRIMARY KEY</label>
+                            <label><input type="radio" name="q9" value="c"> c) NOT NULL</label>
+                            <label><input type="radio" name="q9" value="d"> d) CHECK</label>
+                        </div>
+                        <div class="feedback" data-answer="c"></div>
+                    </div>
+
+                    <div class="question" data-question="10">
+                        <h3>10. La clause HAVING sert à :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q10" value="a"> a) Filtrer les lignes avant regroupement</label>
+                            <label><input type="radio" name="q10" value="b"> b) Filtrer les groupes après regroupement</label>
+                            <label><input type="radio" name="q10" value="c"> c) Ordonner les résultats</label>
+                            <label><input type="radio" name="q10" value="d"> d) Limiter le nombre de lignes</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+                </section>
+
+                <!-- Questions à choix multiples guidés (11-20) -->
+                <section class="question-section">
+                    <h2>🔹 Questions à choix multiples guidés</h2>
+
+                    <div class="question" data-question="11">
+                        <h3>11. Quelle est la différence entre une dépendance fonctionnelle élémentaire et une dépendance fonctionnelle élémentaire directe ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q11" value="a"> a) La directe est transitive, l'élémentaire ne l'est pas</label>
+                            <label><input type="radio" name="q11" value="b"> b) L'élémentaire est entre deux propriétés, la directe en inclut une troisième</label>
+                            <label><input type="radio" name="q11" value="c"> c) La directe n'a pas de propriété intermédiaire déterminant la cible</label>
+                            <label><input type="radio" name="q11" value="d"> d) Aucune différence, c'est la même chose</label>
+                        </div>
+                        <div class="feedback" data-answer="c"></div>
+                    </div>
+
+                    <div class="question" data-question="12">
+                        <h3>12. Parmi les étapes suivantes, laquelle ne fait pas partie de la construction d'un MCD à partir d'un GDF ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q12" value="a"> a) Extraction de la liste des propriétés</label>
+                            <label><input type="radio" name="q12" value="b"> b) Établissement du dictionnaire de données</label>
+                            <label><input type="radio" name="q12" value="c"> c) Construction du GDF</label>
+                            <label><input type="radio" name="q12" value="d"> d) Création des triggers SQL</label>
+                        </div>
+                        <div class="feedback" data-answer="d"></div>
+                    </div>
+
+                    <div class="question" data-question="13">
+                        <h3>13. Si vous avez une association binaire avec cardinalités (1,N) et (0,N) entre Client et Commande, comment la traduisez-vous en MLD ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q13" value="a"> a) Création d'une nouvelle table "Passer"</label>
+                            <label><input type="radio" name="q13" value="b"> b) Migration de la clé de Client vers Commande</label>
+                            <label><input type="radio" name="q13" value="c"> c) Migration de la clé de Commande vers Client</label>
+                            <label><input type="radio" name="q13" value="d"> d) Aucune migration, association ignorée</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="14">
+                        <h3>14. Quelle requête affiche les employés dont le salaire est supérieur à la moyenne de leur département ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q14" value="a"> a) SELECT nom, salaire FROM emp WHERE salaire > AVG(salaire)</label>
+                            <label><input type="radio" name="q14" value="b"> b) SELECT nom, salaire FROM emp e WHERE salaire > (SELECT AVG(salaire) FROM emp WHERE dept = e.dept)</label>
+                            <label><input type="radio" name="q14" value="c"> c) SELECT nom, salaire FROM emp GROUP BY dept HAVING salaire > AVG(salaire)</label>
+                            <label><input type="radio" name="q14" value="d"> d) SELECT nom, salaire FROM emp ORDER BY salaire DESC</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="15">
+                        <h3>15. Quel est l'objectif commun des trois formes normales ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q15" value="a"> a) Augmenter la redondance</label>
+                            <label><input type="radio" name="q15" value="b"> b) Éliminer la redondance et les anomalies</label>
+                            <label><input type="radio" name="q15" value="c"> c) Ajouter des clés étrangères</label>
+                            <label><input type="radio" name="q15" value="d"> d) Optimiser les performances des requêtes</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="16">
+                        <h3>16. Une association réflexive est :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q16" value="a"> a) Une association entre deux entités différentes</label>
+                            <label><input type="radio" name="q16" value="b"> b) Une association entre une entité et elle-même</label>
+                            <label><input type="radio" name="q16" value="c"> c) Une association sans cardinalités</label>
+                            <label><input type="radio" name="q16" value="d"> d) Une association uniquement en MLD</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="17">
+                        <h3>17. Quelle jointure utilise l'opérateur "=" entre deux colonnes ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q17" value="a"> a) Jointure non équi</label>
+                            <label><input type="radio" name="q17" value="b"> b) Jointure externe</label>
+                            <label><input type="radio" name="q17" value="c"> c) Jointure interne équi</label>
+                            <label><input type="radio" name="q17" value="d"> d) Auto-jointure</label>
+                        </div>
+                        <div class="feedback" data-answer="c"></div>
+                    </div>
+
+                    <div class="question" data-question="18">
+                        <h3>18. Quelle contrainte assure qu'une colonne a des valeurs uniques mais peut contenir NULL ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q18" value="a"> a) PRIMARY KEY</label>
+                            <label><input type="radio" name="q18" value="b"> b) UNIQUE</label>
+                            <label><input type="radio" name="q18" value="c"> c) NOT NULL</label>
+                            <label><input type="radio" name="q18" value="d"> d) FOREIGN KEY</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="19">
+                        <h3>19. Quelle fonction de groupe calcule la moyenne ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q19" value="a"> a) SUM()</label>
+                            <label><input type="radio" name="q19" value="b"> b) AVG()</label>
+                            <label><input type="radio" name="q19" value="c"> c) COUNT()</label>
+                            <label><input type="radio" name="q19" value="d"> d) MAX()</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="20">
+                        <h3>20. Dans un MCD de bibliothèque, quelle association est la plus probable entre "Livre" et "Auteur" ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q20" value="a"> a) Un livre a un auteur, un auteur écrit un livre</label>
+                            <label><input type="radio" name="q20" value="b"> b) Un livre a un auteur, un auteur écrit plusieurs livres</label>
+                            <label><input type="radio" name="q20" value="c"> c) Un livre a plusieurs auteurs, un auteur écrit un livre</label>
+                            <label><input type="radio" name="q20" value="d"> d) Un livre a plusieurs auteurs, un auteur écrit plusieurs livres</label>
+                        </div>
+                        <div class="feedback" data-answer="d"></div>
+                    </div>
+                </section>
+
+                <!-- Questions à réponses courtes (21-25) -->
+                <section class="question-section">
+                    <h2>🔹 Questions à réponses courtes avec choix proposés</h2>
+
+                    <div class="question" data-question="21">
+                        <h3>21. Donnez un exemple de dépendance fonctionnelle élémentaire directe :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q21" value="a"> a) CodePostal → Ville</label>
+                            <label><input type="radio" name="q21" value="b"> b) Matricule → Nom → Salaire</label>
+                            <label><input type="radio" name="q21" value="c"> c) RefArticle → Catégorie → TauxTVA</label>
+                            <label><input type="radio" name="q21" value="d"> d) Date → Jour, Mois, Année</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+
+                    <div class="question" data-question="22">
+                        <h3>22. Quelle règle de passage MCD → MLD s'applique à une association binaire (1,N)-(0,N) ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q22" value="a"> a) Règle 1 : Entité → Relation</label>
+                            <label><input type="radio" name="q22" value="b"> b) Règle 2 : Migration de clé</label>
+                            <label><input type="radio" name="q22" value="c"> c) Règle 3 : Nouvelle table</label>
+                            <label><input type="radio" name="q22" value="d"> d) Règle 4 : Association n-aire</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="23">
+                        <h3>23. Quelle clause SQL filtre les groupes ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q23" value="a"> a) WHERE</label>
+                            <label><input type="radio" name="q23" value="b"> b) GROUP BY</label>
+                            <label><input type="radio" name="q23" value="c"> c) HAVING</label>
+                            <label><input type="radio" name="q23" value="d"> d) ORDER BY</label>
+                        </div>
+                        <div class="feedback" data-answer="c"></div>
+                    </div>
+
+                    <div class="question" data-question="24">
+                        <h3>24. Quel type de langage SQL est utilisé pour créer une table ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q24" value="a"> a) LDD</label>
+                            <label><input type="radio" name="q24" value="b"> b) LMD</label>
+                            <label><input type="radio" name="q24" value="c"> c) LID</label>
+                            <label><input type="radio" name="q24" value="d"> d) LCD</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+
+                    <div class="question" data-question="25">
+                        <h3>25. Qu'est-ce qu'un SGBD ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q25" value="a"> a) Un système de gestion de bases de données</label>
+                            <label><input type="radio" name="q25" value="b"> b) Un modèle conceptuel</label>
+                            <label><input type="radio" name="q25" value="c"> c) Un langage de requête</label>
+                            <label><input type="radio" name="q25" value="d"> d) Un type de base NoSQL</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+                </section>
+
+                <!-- Questions Vrai/Faux (26-30) -->
+                <section class="question-section">
+                    <h2>🔹 Vrai ou Faux</h2>
+
+                    <div class="question" data-question="26">
+                        <h3>26. Un MCD peut contenir des propriétés calculées.</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q26" value="a"> Vrai</label>
+                            <label><input type="radio" name="q26" value="b"> Faux</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="27">
+                        <h3>27. Une clé primaire peut être NULL.</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q27" value="a"> Vrai</label>
+                            <label><input type="radio" name="q27" value="b"> Faux</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="28">
+                        <h3>28. La clause WHERE peut contenir des fonctions de groupe.</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q28" value="a"> Vrai</label>
+                            <label><input type="radio" name="q28" value="b"> Faux</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="29">
+                        <h3>29. Une association ternaire devient une table en MLD.</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q29" value="a"> Vrai</label>
+                            <label><input type="radio" name="q29" value="b"> Faux</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+
+                    <div class="question" data-question="30">
+                        <h3>30. SQL signifie "Structured Question Language".</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q30" value="a"> Vrai</label>
+                            <label><input type="radio" name="q30" value="b"> Faux</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+                </section>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-reset" onclick="resetForm()">🔄 Réinitialiser</button>
+                    <button type="submit" class="btn-submit">✓ Corriger</button>
+                </div>
+            </form>
+        </main>
+
+        <!-- Résultats -->
+        <div id="resultsModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeResults()">&times;</span>
+                <h2>Résultats</h2>
+                <div class="results-score">
+                    <div class="score-display">
+                        <span class="score-number" id="scoreNumber">0</span>
+                        <span class="score-percent">%</span>
+                    </div>
+                    <div class="score-text" id="scoreText"></div>
+                </div>
+                <div id="resultsList"></div>
+                <div class="modal-actions">
+                    <button class="btn-primary" onclick="closeResults()">Fermer</button>
+                    <button class="btn-secondary" onclick="resetForm()">Recommencer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="qcm-script.js"></script>
+</body>
+</html>
